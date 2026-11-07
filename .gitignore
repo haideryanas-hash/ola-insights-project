@@ -1,0 +1,6 @@
+   venv/
+   Data/
+   __pycache__/
+   *.pbix
+   ola_clean_for_powerbi.csv
+   Ola Dashboard.pdf

@@ -1,0 +1,19 @@
+step,detail
+load,"103,024 rows x 20 columns from sheet 'July'"
+duplicates,"0 duplicate Booking_IDs, 0 fully duplicated rows - nothing to remove"
+rename,"Vehicle Images->Vehicle_Image_URL, Canceled_Rides_by_* -> *_Cancel_Reason, Driver_Ratings->Driver_Rating"
+datetime,"Date column held date+time, matching the Time column on 100% of rows -> split into Date, Time, Booking_Datetime"
+standardise,Vehicle_Type 'eBike' -> 'E-Bike' (matches dashboard slides)
+structural-null,"Customer_Cancel_Reason: 92,525 blanks -> 'Not Applicable' (ride never reached that stage)"
+structural-null,"Driver_Cancel_Reason: 84,590 blanks -> 'Not Applicable' (ride never reached that stage)"
+structural-null,"Incomplete_Rides: 39,057 blanks -> 'Not Applicable' (ride never reached that stage)"
+structural-null,"Incomplete_Rides_Reason: 99,098 blanks -> 'Not Applicable' (ride never reached that stage)"
+structural-null,"Payment_Method: 39,057 blanks -> 'Not Applicable' (ride never reached that stage)"
+structural-null,"V_TAT: 39,057 blanks kept as NaN (only Success rides have it; imputing would fabricate data)"
+structural-null,"C_TAT: 39,057 blanks kept as NaN (only Success rides have it; imputing would fabricate data)"
+structural-null,"Driver_Rating: 39,057 blanks kept as NaN (only Success rides have it; imputing would fabricate data)"
+structural-null,"Customer_Rating: 39,057 blanks kept as NaN (only Success rides have it; imputing would fabricate data)"
+features,"added Hour, Day_Name, Day_of_Week, Is_Weekend, Week, Time_Band, Is_Success, Is_Incomplete, Is_Fully_Completed, Cancelled_By, Failure_Type, Revenue_Realised, Revenue_Lost, Route, Rating_Gap, Fare_per_km, Distance_Band, Fare_Band"
+anomalies,"Same pickup & drop: 2,121 | fare/km above P99 (Rs 641/km): 640 | <=3 km but >=Rs1000: 442 - all kept, flagged for review"
+validate,row count unchanged; all consistency rules pass (status vs payment/ratings/TAT/distance)
+save,"ola_clean.csv.gz: 103,024 rows x 42 columns (image URL column dropped - one URL per vehicle type, lives in the app)"

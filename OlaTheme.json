@@ -1,0 +1,28 @@
+{
+  "name": "Ola Dark",
+  "dataColors": ["#C6F432", "#FF6B4A", "#FFB547", "#8E9AAF", "#B388FF", "#66BB6A", "#4FC3F7", "#F06292"],
+  "background": "#151A16",
+  "foreground": "#E8EDE9",
+  "tableAccent": "#C6F432",
+  "good": "#C6F432",
+  "bad": "#FF6B4A",
+  "neutral": "#FFB547",
+  "maximum": "#C6F432",
+  "center": "#FFB547",
+  "minimum": "#FF6B4A",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#151A16" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#2A352B" } } }],
+        "title": [{ "show": true, "fontColor": { "solid": { "color": "#E8EDE9" } }, "fontSize": 12 }]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#0D120E" } }, "transparency": 0 }],
+        "outspace": [{ "color": { "solid": { "color": "#0D120E" } }, "transparency": 0 }]
+      }
+    }
+  }
+}

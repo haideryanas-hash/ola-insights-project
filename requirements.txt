@@ -1,0 +1,7 @@
+streamlit>=1.52
+pandas>=2.2
+numpy
+plotly>=6.0
+scipy
+openpyxl
+pymupdf
