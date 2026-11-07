@@ -1,6 +1,6 @@
 # 🚖 Ola Ride Insights: Revenue Leakage Control Room
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](YOUR_STREAMLIT_APP_URL)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ola-insights-project.streamlit.app/)
 
 An end-to-end analytics project on **103,024 Ola ride bookings** (Bengaluru, July 2024): data cleaning, SQL analysis, a Power BI dashboard, and an interactive Streamlit app that answers one business question:
 
